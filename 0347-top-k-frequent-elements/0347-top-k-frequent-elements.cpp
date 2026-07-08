@@ -11,20 +11,20 @@ public:
         {
             freq[entry.second].push_back(entry.first);
         }
-        vector<int> res;
-        for(int i=freq.size()-1;i>0;--i)
+        vector<int>res;
+        for(int i=freq.size()-1;i>0;i--)
         {
-            for(int n:freq[i])
+            
+            for(int element:freq[i])
             {
-                res.push_back(n);
+                res.push_back(element);
                 if(res.size()==k)
                 {
                     return res;
                 }
-            }
 
+            }
         }
         return res;
-
     }
 };
